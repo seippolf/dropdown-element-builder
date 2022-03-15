@@ -1,8 +1,7 @@
-from dropdown import Dropdown
-from csv_class import CSV
-from time import sleep
+#!/usr/bin/python3
 import sys
-
+from modules.dropdown import Dropdown
+from modules.csv_class import CSV
 
 def main():
     args = sys.argv
@@ -10,13 +9,18 @@ def main():
         try:
             c = CSV(args[1])
             for i in range(len(c)):
-                header = c.get(i)[0]
-                body = c.get(i)[1]
+                header = c[0][0]
+                body = c[0][1]
                 print(Dropdown(header,body))
         except FileNotFoundError:
             print('File not found')
     else:
         help()
+
 def help():
+    """
+        CLI help message
+    """
     print('Usage: dropdown_builder [filename]')
+    
 main()

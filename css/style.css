@@ -38,7 +38,7 @@
   transition: 0.4s;
 
 }
-/* Change beforeto "-" and rotate */
+/* Change before to "-" and rotate */
 .cctdropdown-dropdown > input[name="collapse"]:checked ~ .handle label:before {
   transform: rotate(180deg);
   content: "\2212";

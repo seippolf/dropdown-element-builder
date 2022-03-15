@@ -1,5 +1,4 @@
 import csv
-from glob import escape
 
 class CSV:
     def __init__(self, file):
@@ -8,7 +7,7 @@ class CSV:
     def __len__(self):
         return len(self._arr)
 
-    def get(self, index):
+    def __getitem__(self, index):
         return self._arr[index]
 
     def build_arr(self, file):
