@@ -6,6 +6,7 @@ class CSV:
         and code readability
 
         ...
+
         Attributes
         ----------
         _arr : list
@@ -57,4 +58,5 @@ class CSV:
             csv_reader = csv.reader(csv_file, escapechar='\\')
             for row in csv_reader:
                 arr.append(row)
+        csv_file.close()
         return arr
