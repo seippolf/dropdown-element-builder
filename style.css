@@ -1,0 +1,73 @@
+/* ----- Input ----- */
+.cctdropdown-dropdown > input[name="collapse"] {
+  /* Hide this */
+  display: none;
+}
+
+
+/* ----- Label Bar ----- */
+.cctdropdown-dropdown h2 {
+  margin-block-end: 0;
+}
+.cctdropdown-dropdown label {
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: normal;
+
+  /* Uses flex for versatility */
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  background-color: #001C48;
+  transition: background-color 0.5s;
+}
+
+.cctdropdown-dropdown label:hover,
+.cctdropdown-dropdown label:focus {
+  background-color: #1E5288;
+}
+
+/* Set ::before to "+" and */
+.cctdropdown-dropdown .handle label:before {
+  content: "+";
+  margin: 10px;
+  font-size: 1em;
+  line-height: 1.556em;
+  vertical-align: middle;
+  transition: 0.4s;
+
+}
+/* Change beforeto "-" and rotate */
+.cctdropdown-dropdown > input[name="collapse"]:checked ~ .handle label:before {
+  transform: rotate(180deg);
+  content: "\2212";
+  transform-origin: center;
+  transition: 0.4s;
+}
+
+.cctdropdown-dropdown > input[name="collapse"]:checked ~ .content {
+  height: 300px;
+  transition: height 0.5s;
+}
+.cctdropdown-dropdown .content {
+  background-color: #ffffff;
+  display: flex;
+  overflow: hidden;
+  height: 0;
+  transition: 0.5s;
+  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3);
+}
+.content p {
+  padding: 10px;
+}
+
+/* Below is formatting for example, not part of dropdown  */
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#test-contentarea {
+  width: min(1170px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
