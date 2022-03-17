@@ -16,6 +16,8 @@ def main():
             print('File not found')
         except FileExistsError:
             print('Cannot write file that already exists')
+        except IndexError:
+            print('Formatting error in CSV [See README]')
     else:
         print(cli.usage())
 main()

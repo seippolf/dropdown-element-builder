@@ -54,4 +54,4 @@ class Dropdown:
 
     def __str__(self):
         return \
-            f'<div class="cctdropdown-dropdown">\n\t{self.header()}\n\t{self.body()}\n</div>'
+            f'<div class="cctdropdown-dropdown">\n\t{self.header()}\n\t{self.body()}\n</div>\n'
